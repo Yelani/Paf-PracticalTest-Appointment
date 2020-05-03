@@ -13,7 +13,13 @@
 	<div class="row">
 		<div class="col">
        
-			<h1>Items Management</h1>
+       		<br>
+       
+			<center><h1>Appointments Management</h1></center>
+			
+			<br>
+			<br>
+			
 			<form method="post" action="items.jsp" >
 				Appointment ID: <input name="appointmentid" type="text" class="form-control"><br> 
 				Patient Name:<input name="itemName" type="text" class="form-control"><br> 
@@ -22,11 +28,11 @@
 				Appointment Number: <input name="itemDesc" type="text" class="form-control"><br>
 				Date: <input name="itemDesc" type="text" class="form-control"><br>
 				Time: <input name="itemDesc" type="text" class="form-control"><br> 
-			<input name="btnSubmit" type="submit" value="Save" class="btn btn-primary">
+			<input name="btnSubmit" type="submit" value="Save" class="btn btn-success">
 			
 			</form>
 
-<br>
+			<br>
 
 			<table border="1">
 				<tr>
