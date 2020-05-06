@@ -32,7 +32,7 @@ body
 	<br>
 	<br>
 	
-		<h1><b>Appointment Management</b></h1>
+		<h1><b>Appointments Management</b></h1>
 	
 	
 	
