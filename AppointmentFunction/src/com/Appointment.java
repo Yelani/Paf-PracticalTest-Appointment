@@ -71,7 +71,7 @@ public class Appointment {
 					
 					
 					// buttons 
-					output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
+					output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-primary'></td>"
 								+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-itemid='" + aid + "'>" + "</td></tr>";    
 					
 					
