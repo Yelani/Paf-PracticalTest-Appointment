@@ -84,3 +84,21 @@ function onItemSaveComplete(response, status)
 	
 }
 
+//REMOVE
+$(document).on("click", ".btnRemove", function(event)
+{
+	$.ajax(
+	{
+		url : "appointmentAPI",
+		type : "DELETE", 
+		data : "aid=" + $(this).data("aid"), 
+		dataType : "text", 
+		complete : function(response, status)
+		{
+			onItemDeleteComplete(response.responseText, status); 
+		}
+		
+	});
+				
+});
+
