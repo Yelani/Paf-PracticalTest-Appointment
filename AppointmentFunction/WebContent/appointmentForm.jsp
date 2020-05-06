@@ -12,12 +12,12 @@
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/appointments.js"></script>
 <style>
+
 body
 {
 	background-image:url("background Image.jpg");
 	background-size: cover;
 }
-
 
 </style>
 
