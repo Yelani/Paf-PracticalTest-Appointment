@@ -248,40 +248,6 @@ public class Appointment {
 			return output;
 		}
 		
-	
-	
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 }//end

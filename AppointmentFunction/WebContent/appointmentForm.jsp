@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="Views/css/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
-<script src="Components/appointment.js"></script>
+<script src="Components/appointments.js"></script>
 
 </head>
 <body>
@@ -59,15 +59,13 @@
 	
 		<br>
 		
-		<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> 
-		
-		<input type="hidden" id="hidAppointmentIDSave" name="hidAppointmentIDSave" value="">
-		
-		<br>
-		<br>
-		
-		<div id="alertSuccess" class="alert alert-success"></div> 
-		<div id="alertError" class="alert alert-danger"></div> 
+		<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
+			
+			<input type="hidden" id="hidAppointmentIDSave" name="hidAppointmentIDSave" value="">
+			
+			<!-- ALERTS -->
+			<div id="alertSuccess" class="alert alert-success"></div> 
+			<div id="alertError" class="alert alert-danger"></div> 
 		
 	</form> 
 	
