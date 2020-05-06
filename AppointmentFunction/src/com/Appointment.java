@@ -92,6 +92,62 @@ public class Appointment {
 			return output; 
 		}
 		
+		//INSERT
+		public String insertAppointment(String patientName, String doctorName, String hospitalName, String appointmentNo, String date, String time) 
+		{
+		
+			String output = ""; 
+			
+			try
+			{
+			
+				Connection con = connect(); 
+				
+				if (con == null)
+				{
+					
+					return "Error while connecting to the database for Inserting appointments.";
+				
+				}
+				
+				
+				//Insert Query
+				String query = "INSERT INTO `appointments`(`aid`, `patientName`, `doctorName`, `hospitalName`, `appointmentNo`, `date`, `time`) VALUES (?,?,?,?,?,?,?)";   
+				
+				// create a prepared statement
+				PreparedStatement preparedStmt = con.prepareStatement(query); 
+				
+				// binding values 
+				preparedStmt.setInt(1, 0); 
+				preparedStmt.setString(2, patientName); 
+				preparedStmt.setString(3, doctorName); 
+				preparedStmt.setString(4, hospitalName);
+				preparedStmt.setString(5, appointmentNo); 
+				preparedStmt.setString(6, date);
+				preparedStmt.setString(7, time); 
+				
+				// execute the statement
+				preparedStmt.execute(); 
+				con.close();
+				
+				String newAppointments = readAppointments(); 
+				output = "{\"status\":\"success\", \"data\": \"" + newAppointments + "\"}";
+				
+				
+			}
+			catch(Exception e)
+			{
+
+				output = "{\"status\":\"error\",\"data\":\"Error while inserting the appointment.\"}";
+				System.err.println(e.getMessage()); 
+				
+			}
+		
+			return output; 
+			
+		}
+		
+		
 	
 	
 
