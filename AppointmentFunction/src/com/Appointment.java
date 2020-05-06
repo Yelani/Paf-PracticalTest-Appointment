@@ -148,6 +148,58 @@ public class Appointment {
 		}
 		
 		
+		//UPDATE
+		public String updateItem(String aid, String patientName, String doctorName, String hospitalName, String appointmentNo, String date, String time)
+		{
+			
+			String output = ""; 
+			
+			try
+			{
+				Connection con = connect(); 
+				
+				if (con == null) 
+				{
+					
+					return "Error while connecting to the database for updating appointments.";  
+					
+				}
+				
+				//Update query
+				String query =  "UPDATE `appointments` SET `patientName`=?,`doctorName`=?,`hospitalName`=?,`appointmentNo`=?,`date`=?,`time`=? WHERE `aid`=?";
+				
+				// create a prepared statement 
+				PreparedStatement preparedStmt = con.prepareStatement(query); 
+			
+				// binding values
+				preparedStmt.setString(1, patientName); 
+				preparedStmt.setString(2, doctorName); 
+				preparedStmt.setString(3, hospitalName); 
+				preparedStmt.setString(4, appointmentNo); 
+				preparedStmt.setString(5, date);
+				preparedStmt.setString(4, time); 
+				preparedStmt.setInt(5, Integer.parseInt(aid)); 
+				
+				// execute the statement 
+				preparedStmt.execute();
+				con.close(); 
+				
+				String newItems = readAppointments(); 
+				output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
+							
+			}
+			catch(Exception e)
+			{
+				
+				output = "{\"status\":\"error\", \"data\": \"Error while updating the item.\"}";
+				System.err.println(e.getMessage());
+				
+			}
+			
+			return output; 
+			
+		}
+		
 	
 	
 
