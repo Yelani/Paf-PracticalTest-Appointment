@@ -11,6 +11,15 @@
 <link rel="stylesheet" href="Views/css/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/appointments.js"></script>
+<style>
+body
+{
+	background-image:url("background Image.jpg");
+	background-size: cover;
+}
+
+
+</style>
 
 </head>
 <body>
@@ -19,7 +28,13 @@
 <div class="row">
 <div class="col-6">
 
-	<h1>Appointments</h1>
+	<br>
+	<br>
+	<br>
+	
+		<h1><b>Appointment Management</b></h1>
+	
+	
 	
 	<br>
 	
@@ -28,38 +43,39 @@
 		<p> Place your appointments securely with us..</p>
 		
 		<br> 
+		<br>
 		
 		Patient Name:
-		<input id="patientName" name="patientName" type="text" class="form-control form-control-sm">
+		<input id="patientName" name="patientName" type="text" class="form-control form-control-sm" placeholder="Enter Patient Name">
 		
 		<br>
 		
 		Doctor Name:
-		<input id="doctorName" name="doctorName" type="text" class="form-control form-control-sm">
+		<input id="doctorName" name="doctorName" type="text" class="form-control form-control-sm" placeholder="Enter Doctor Name">
 		
 		<br>
 		
 		HospitalName:
-		<input id="hospitalName" name="hospitalName" type="text" class="form-control form-control-sm">
+		<input id="hospitalName" name="hospitalName" type="text" class="form-control form-control-sm" placeholder="Enter Hospital Name">
 		
 		<br>
 		
 		Appointment No:
-		<input id="appointmentNo" name="appointmentNo" type="text" class="form-control form-control-sm">
+		<input id="appointmentNo" name="appointmentNo" type="text" class="form-control form-control-sm" placeholder="Enter Appointment Number">
 		
 		<br>
 		
 		Date:
-		<input id="date" name="date" type="text" class="form-control form-control-sm">
+		<input id="date" name="date" type="text" class="form-control form-control-sm" placeholder="02/02/2020">
 		
 		<br>
 		
 		Time:
-		<input id="time" name="time" type="text" class="form-control form-control-sm">
+		<input id="time" name="time" type="text" class="form-control form-control-sm" placeholder="08:55 AM">
 	
 		<br>
 		
-		<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
+		<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-success">
 			
 			<input type="hidden" id="hidAppointmentIDSave" name="hidAppointmentIDSave" value="">
 			

@@ -41,7 +41,7 @@ public class Appointment {
 				}
 				
 				// Prepare the html table to be displayed
-				output = "<table class=\"table  table-hover\"><tr class=\"alert-warning\"><th>Patient Name</th><th>Doctor Name</th><th>HospitalName</th><th>Appointment No</th><th>Date</th>\""
+				output = "<table class=\"table  table-hover\"><tr class=\"alert-info\"><th>Patient Name</th><th>Doctor Name</th><th>HospitalName</th><th>Appointment No</th><th>Date</th>\""
 						+ "<th>Time</th><th>Update</th><th>Remove</th></tr>";  
 				
 				//SQL statements
@@ -71,7 +71,7 @@ public class Appointment {
 					
 					
 					// buttons 
-					output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-primary'></td>"
+					output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-warning'></td>"
 								+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-itemid='" + aid + "'>" + "</td></tr>";    
 					
 					

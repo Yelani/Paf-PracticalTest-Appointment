@@ -83,7 +83,7 @@ public class appointmentAPI extends HttpServlet {
 		
 		Map paras = getParasMap(request);
 		
-		String output = appObj.deleteItem(paras.get("appointmentID").toString());
+		String output = appObj.deleteItem(paras.get("aid").toString());
 		
 	
 		response.getWriter().write(output);
