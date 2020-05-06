@@ -184,8 +184,8 @@ public class Appointment {
 				preparedStmt.execute();
 				con.close(); 
 				
-				String newItems = readAppointments(); 
-				output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
+				String newAppointments = readAppointments(); 
+				output = "{\"status\":\"success\", \"data\": \"" + newAppointments + "\"}";
 							
 			}
 			catch(Exception e)
@@ -198,6 +198,54 @@ public class Appointment {
 			
 			return output; 
 			
+		}
+		
+		
+		//DELETE
+		public String deleteItem(String aid) 
+		{
+			
+			String output = ""; 
+			
+			try
+			{
+				Connection con = connect(); 
+				
+				if (con == null) 
+				{
+					
+					return "Error while connecting to the database for deleting an appointment.";  
+					
+				}
+				
+				//Delete query
+				String query = "DELETE FROM `appointments` WHERE `aid`=?"; 
+				
+				// create a prepared statement 
+				PreparedStatement preparedStmt = con.prepareStatement(query); 
+				
+				// binding values
+				preparedStmt.setInt(1, Integer.parseInt(aid)); 
+				
+				// execute the statement 
+				preparedStmt.execute(); 
+				con.close(); 
+				
+				String newAppointments = readAppointments(); 
+				output = "{\"status\":\"success\", \"data\": \"" + newAppointments + "\"}";
+				
+				
+			}
+			catch(Exception e)
+			{
+				
+				output = "{\"status\":\"error\", \"data\": \"Error while deleting an appointment.\"}";
+				System.err.println(e.getMessage()); 
+				
+				
+			}
+			
+			return output;
 		}
 		
 	
