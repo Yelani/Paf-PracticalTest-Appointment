@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/appointmentAPI")
 public class appointmentAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	Appointment appObj = new Appointment();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -33,14 +35,26 @@ public class appointmentAPI extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	
+	//INSERT
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
+		String output = appObj.insertAppointment(request.getParameter("patientName"), 
+				request.getParameter("doctorName"), 
+				request.getParameter("hospitalName"), 
+				request.getParameter("appointmentNo"),
+				request.getParameter("date"),
+				request.getParameter("time"));
+		
+		
+		response.getWriter().write(output); 
+				
 	}
 
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
+	//UPDATE
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
@@ -48,6 +62,8 @@ public class appointmentAPI extends HttpServlet {
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
+	
+	//DELETE
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}

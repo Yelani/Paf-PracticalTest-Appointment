@@ -41,7 +41,7 @@ public class Appointment {
 				}
 				
 				// Prepare the html table to be displayed
-				output = "<table class=\"table table-bordered\"><tr><th>Patient Name</th><th>Doctor Name</th><th>HospitalName</th><th>Appointment No</th><th>Date</th>\""
+				output = "<table class=\"table  table-hover\"><tr class=\"alert-warning\"><th>Patient Name</th><th>Doctor Name</th><th>HospitalName</th><th>Appointment No</th><th>Date</th>\""
 						+ "<th>Time</th><th>Update</th><th>Remove</th></tr>";  
 				
 				//SQL statements
