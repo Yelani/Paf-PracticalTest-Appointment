@@ -149,7 +149,7 @@ public class Appointment {
 		
 		
 		//UPDATE
-		public String updateItem(String aid, String patientName, String doctorName, String hospitalName, String appointmentNo, String date, String time)
+		public String updateAppointment(String aid, String patientName, String doctorName, String hospitalName, String appointmentNo, String date, String time)
 		{
 			
 			String output = ""; 
