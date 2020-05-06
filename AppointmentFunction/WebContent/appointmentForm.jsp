@@ -61,6 +61,8 @@
 		
 		<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> 
 		
+		<input type="hidden" id="hidAppointmentIDSave" name="hidAppointmentIDSave" value="">
+		
 		<br>
 		<br>
 		
@@ -75,7 +77,7 @@
 	<div id="divItemsGrid">
 			<% 
 				Appointment appObj = new Appointment();
-				out.print(appObj.readItems()); 
+				out.print(appObj.readAppointments()); 
 			%>
 	</div>
 			
