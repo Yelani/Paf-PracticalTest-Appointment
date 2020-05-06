@@ -80,7 +80,14 @@ public class appointmentAPI extends HttpServlet {
 	
 	//DELETE
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		Map paras = getParasMap(request);
+		
+		String output = appObj.deleteItem(paras.get("appointmentID").toString());
+		
+	
+		response.getWriter().write(output);
+		
 	}
 	
 	
